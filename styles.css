@@ -1,0 +1,351 @@
+*, :after, :before{
+    box-sizing: border-box;
+    transition: 0.5s ease-in;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    background-image: url('assets/bkgr_1.svg');
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    color: #353538;
+    font-family: 'UnistraA-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.5s ease-in-out;
+}
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+--------------------------all device------------------------*/
+.title{
+    font-size: 2em;
+    transition: 0.5s;
+    margin: 0;
+}
+a {
+    display: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+h3 {
+    font-family: 'UnistraA-Bold';
+}
+
+/*/////////////CONTENT BEGIN///////////////*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    color: #212e53;
+}
+
+.row {
+    background-color: #bed3c3;
+    width: 100vw;
+    height: 100vh;
+}
+/*/////////////PRESENTATION ROW///////////////*/
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    z-index: 1;
+
+    background-image: url("assets/bkgr_2.svg");
+    background-attachment: fixed;
+    animation: moveBackground 30s linear infinite; /* Appelle l'animation moveBackground */
+}
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0; /* Position de départ */
+    }
+    100% {
+        background-position: 300% 300%; /* Position finale (déplace le dégradé jusqu'au bout) */
+    }
+}
+#signature {
+    overflow: hidden;
+    width: 35%;
+}
+#signature img{
+    margin: 20px;
+    transform: scale(2.3) translateX(2vw) translateY(-16vh);
+    position: absolute;
+    z-index: 1;
+}
+
+#welcome{
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #00000000, #bed3c39a, #bed3c3, #bed3c3, #6fb4c0, #4a919e);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 10vw 10px 10px;
+    width: 80vw;
+    height: 100vh;
+    cursor: pointer;
+}
+#welcome h1{
+    text-align: right;
+}
+#salut{
+    font-size: 4em;
+    margin-bottom: 0px;
+    transition: margin-right 5s;
+}
+#salut:hover{
+    margin-right: 10%;
+}
+#portfolio:hover{
+        transform: scale(1.2) translateX(-1.2em);
+}
+.quote{
+    color: #ce6a6b;
+}
+
+
+/*/////////////PROFIL///////////////*/
+
+.profil{
+    /*element suerieur en absolut*/
+    position: absolute;
+    z-index: 1;
+    margin-top: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.profil .title{
+    font-size: 2.0em;
+}
+.profil .text{
+    padding: 30px;
+}
+.profil .text .intitule{
+    font-family: 'UnistraD-Bold';
+}
+.profil .text li{
+    list-style: none;
+}
+.profil .img{
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 15%;
+    height: 50vh;
+    width: 50vh;
+}
+.profil img{
+    width: inherit;
+    filter: grayscale(100%);
+}
+.profil:hover .img{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.profil img:hover {
+    filter: grayscale(0%);
+}
+.arrow{
+    position: relative;
+    top: -10px;
+    left: 5px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+.profil:hover .arrow{
+    position: relative;
+    right: 20px;
+    transform: translate(10px, -10px) rotate(-45deg);
+}
+
+.title .arrow {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.title .arrow:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.title:hover .arrow {
+    padding-right: 25px;
+}
+
+.title:hover .arrow:after {
+    opacity: 1;
+    right: 0;
+    animation: animeArrow 1s linear infinite;
+}
+@keyframes animeArrow {
+    50% {
+        transform: scale(1.3);
+    }
+    10% {
+        transform: initial;
+    }
+}
+
+
+/*/////////////PROJETS///////////////*/
+.projet{
+    width: 100vw;
+    height: 120vh;
+    margin-top: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("assets/bkgr_1.svg");
+    background-size: cover;
+    animation: moveBackground 200s linear infinite; /* Appelle l'animation moveBackground */
+}
+.selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+.box{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 5px;
+    display: inherit;
+    background-color: #212e53;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    color: #a1a1a1;
+    transition: 0.5s ease-in-out;
+}
+.box p{
+    font-size: 0.6em;
+}
+.box h2{
+    margin-top: 0;
+}
+.box .text{
+    padding: 20px;
+}
+.box:hover {
+    height: 70vh;
+}
+
+.box .img{
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 5%;
+    height: 50vh;
+    width: 50vh;
+}
+.box:hover .img{
+    transform: scale(1.2) translateY(-50px);
+}
+.selection .title{
+    font-size: 4.0em;
+}
+
+/*/////////////CONTENT END///////////////*/
+
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+--------------------property on laptop----------------------*/
+@media (min-width: 800px) {
+    /*default stuff*/
+
+      
+}
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+---------------------property on mobil----------------------*/
+@media (max-width: 800px) { 
+    header, .content, .box, footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+---------------------import all font----------------------- */
+@font-face {
+    font-family: "UnistraA-Regular";
+    src: url("font/UnistraA-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Italic";
+    src: url("font/UnistraA-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Bold";
+    src: url("font/UnistraA-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraB-Regular";
+    src: url("font/UnistraB-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Italic";
+    src: url("font/UnistraB-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Bold";
+    src: url("font/UnistraB-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraC-Regular";
+    src: url("font/UnistraC-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraC-Italic";
+    src: url("font/UnistraC-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraC-Bold";
+    src: url("font/UnistraC-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UnistraD-Regular";
+    src: url("font/UnistraD-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraD-Italic";
+    src: url("font/UnistraD-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraD-Bold";
+    src: url("font/UnistraD-Bold.ttf") format("truetype");
+}
