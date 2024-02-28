@@ -1,10 +1,6 @@
 *, :after, :before{
     box-sizing: border-box;
-<<<<<<< HEAD
-    transition: 0.5s ease-in;
-=======
     transition: 0.5s ease-in-out;
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 
 
@@ -40,8 +36,6 @@ h3 {
     font-family: 'UnistraA-Bold';
 }
 
-<<<<<<< HEAD
-=======
 /*/////////////HEADER BEGIN///////////////*/
 header{
     width: 100vw;
@@ -130,7 +124,6 @@ header{
 }
 /*/////////////HEADER END///////////////*/
 
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 /*/////////////CONTENT BEGIN///////////////*/
 .container {
     display: flex;
@@ -193,10 +186,7 @@ header{
     padding: 10px 10vw 10px 10px;
     width: 80vw;
     height: 100vh;
-<<<<<<< HEAD
     cursor: pointer;
-=======
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 #welcome h1{
     text-align: right;
@@ -204,7 +194,6 @@ header{
 #salut{
     font-size: 4em;
     margin-bottom: 0px;
-<<<<<<< HEAD
     transition: margin-right 5s;
 }
 #salut:hover{
@@ -212,12 +201,6 @@ header{
 }
 #portfolio:hover{
         transform: scale(1.2) translateX(-1.2em);
-=======
-}
-#portfolio{
-    font-size: medium;
-    color: #bd1111;
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 .quote{
     color: #ce6a6b;
@@ -226,35 +209,17 @@ header{
 
 /*/////////////PROFIL///////////////*/
 
-<<<<<<< HEAD
 .profil{
     /*element suerieur en absolut*/
     position: absolute;
     z-index: 1;
-=======
-#circle {
-    position: absolute;
-    z-index: 5;
-    left: -100px;
-    width: 200px;
-    height: 200px;
-    background: #4a919e;
-    border-radius: 50%
-}
-
-.profil{
-    /*element suerieur en absolut*/
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
     margin-top: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     overflow: hidden;
-=======
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 .profil .title{
     font-size: 2.0em;
@@ -279,7 +244,6 @@ header{
     width: inherit;
     filter: grayscale(100%);
 }
-<<<<<<< HEAD
 .profil:hover .img{
     transform: scale(1.1);
     transition: 2s;
@@ -287,9 +251,6 @@ header{
 .profil img:hover {
     filter: grayscale(0%);
 }
-=======
-
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 .arrow{
     position: relative;
     top: -10px;
@@ -299,7 +260,6 @@ header{
 }
 .profil:hover .arrow{
     position: relative;
-<<<<<<< HEAD
     right: 20px;
     transform: translate(10px, -10px) rotate(-45deg);
 }
@@ -339,18 +299,11 @@ header{
 }
 
 
-=======
-    transform: translate(10px, -10px) rotate(-45deg);
-}
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 /*/////////////PROJETS///////////////*/
 .projet{
     width: 100vw;
     height: 120vh;
-<<<<<<< HEAD
     margin-top: 200vh;
-=======
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -375,7 +328,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     margin: 20px;
     color: #a1a1a1;
     transition: 0.5s ease-in-out;
@@ -388,25 +340,10 @@ header{
 }
 .box .text{
     padding: 20px;
-=======
-    overflow: hidden;
-    margin: 20px;
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 .box:hover {
     height: 70vh;
 }
-<<<<<<< HEAD
-=======
-.box:hover .img{
-    transform: scale(1.5) translateY(-50xp);
-}
-.box:hover .text{
-    position: absolute;
-    z-index: 1;
-    content-visibility: unset;
-}
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 
 .box .img{
     overflow: hidden;
@@ -415,30 +352,15 @@ header{
     height: 50vh;
     width: 50vh;
 }
-<<<<<<< HEAD
 .box:hover .img{
     transform: scale(1.2) translateY(-50px);
 }
 .selection .title{
     font-size: 4.0em;
-=======
-.box img{
-    object-fit: cover;
-    width: inherit;
-    height: auto;
-}
-.box .text{
-    content-visibility: hidden;
-}
-.selection .title{
-    font-size: 2.0em;
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 }
 
 /*/////////////CONTENT END///////////////*/
 
-<<<<<<< HEAD
-=======
 /*/////////////FOOTER BEGIN///////////////*/
 footer{
     display: flex;
@@ -489,11 +411,10 @@ footer h3{
 
 .fa {
     color : #a1a1a1;
-    transition: 0.2s;
 }
 .network .fa:hover{
     position: relative;
-    transform: scale(1.4) translateY(-40%);
+    transform: scale(1.4) translateY(-20%);
 }
 .fa-facebook:hover {
     color: #3b5998;
@@ -515,7 +436,6 @@ footer h3{
     font-size: medium;
 }
 /*/////////////FOOTER END///////////////*/
->>>>>>> 90d53aebf11e24ad136920404551d84b8be8e734
 
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
