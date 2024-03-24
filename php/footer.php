@@ -1,11 +1,11 @@
 <footer class="footer">
     <section class="info">
         <section class="name">
-            <h3>Nilaina </br>Razafindrambola</h3>
+            <h3 class="title">Nilaina </br>Razafindrambola</h3>
         </section>
 
         <section class="contact">
-            <h3>Contact</h3>
+            <h3 class="title">Contact</h3>
             <ul class="network">
                 <li><a href="https://www.facebook.com/nilaina.razafindrambola/?paipv=0&eav=AfYGd1rpvCasm83T60uCInPx-4fZfLCdZVI_Cf-_8qLIEOOqeXeceZi1S7YCDwRJkK4&_rdr"><i class="fa fa-brands fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/?hl=fr"><i class="fa fa-brands fa-instagram"></i></a></li>

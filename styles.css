@@ -1,40 +1,5 @@
-*, :after, :before{
-    box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-}
 
 
-body{
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    font-size: 1.5em;
-    background-image: url('assets/bkgr_1.svg');
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed;
-    color: #353538;
-    font-family: 'UnistraA-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: 0.5s ease-in-out;
-}
-
-/* ///////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
---------------------------all device------------------------*/
-.title{
-    font-size: 2em;
-    transition: 0.5s;
-    margin: 0;
-}
-a {
-    display: inherit;
-    color: inherit;
-    text-decoration: none;
-}
-h3 {
-    font-family: 'UnistraA-Bold';
-}
 
 /*/////////////HEADER BEGIN///////////////*/
 header{
@@ -45,7 +10,6 @@ header{
 .initial{
     padding-left: 5px;
     border-left: 2px solid #ce6a6b;
-    transition: 0.5s ease-in-out;
 }
 .initial:hover{
     margin-left: 5px;
@@ -89,7 +53,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-.search-input {
+header .search-input {
     width: 60%;
     border: none;
     border-right: none;
@@ -101,11 +65,11 @@ header{
     color: #a1a1a1;
     background-color: #00000000;
 }
-.search{
+header .search{
     color: #ce6a6b;
     font-size: 0.7em;
 }
-.search-button {
+header .search-button {
     width: 40px;
     height: 1.3em;
     border: none;
@@ -117,15 +81,16 @@ header{
     background-color: #212e53;
     transform: translateY(-3px);
 }
-.search-input:hover, .search-input:focus {
+header .search-input:hover, header .search-input:focus {
     background-color: #cecece;
     color: #212e53;
     width: 100%
 }
 /*/////////////HEADER END///////////////*/
 
-/*/////////////CONTENT BEGIN///////////////*/
+/*/////////////CONTENT BEGIN//////////piacbusilysludy/////*/
 .container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +117,7 @@ header{
     position:absolute;
     z-index: 1;
 
-    background-image: url("assets/bkgr_2.svg");
+    background-image: url("/img/bkgr_2.svg");
     background-attachment: fixed;
     animation: moveBackground 30s linear infinite; /* Appelle l'animation moveBackground */
 }
@@ -199,9 +164,6 @@ header{
 #salut:hover{
     margin-right: 10%;
 }
-#portfolio:hover{
-        transform: scale(1.2) translateX(-1.2em);
-}
 .quote{
     color: #ce6a6b;
 }
@@ -228,7 +190,7 @@ header{
     padding: 30px;
 }
 .profil .text .intitule{
-    font-family: 'UnistraD-Bold';
+    font-family: 'UnistraB-Bold';
 }
 .profil .text li{
     list-style: none;
@@ -300,69 +262,14 @@ header{
 
 
 /*/////////////PROJETS///////////////*/
-.projet{
-    width: 100vw;
-    height: 120vh;
-    margin-top: 200vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("assets/bkgr_1.svg");
-    background-size: cover;
-    animation: moveBackground 200s linear infinite; /* Appelle l'animation moveBackground */
-}
-.selection{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: inherit;
-    height: inherit;
-}
-.box{
-    width: 50vw;
-    height: 50vh;
-    border-radius: 5px;
-    display: inherit;
-    background-color: #212e53;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    color: #a1a1a1;
-    transition: 0.5s ease-in-out;
-}
-.box p{
-    font-size: 0.6em;
-}
-.box h2{
-    margin-top: 0;
-}
-.box .text{
-    padding: 20px;
-}
-.box:hover {
-    height: 70vh;
-}
-
-.box .img{
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 5%;
-    height: 50vh;
-    width: 50vh;
-}
-.box:hover .img{
-    transform: scale(1.2) translateY(-50px);
-}
-.selection .title{
-    font-size: 4.0em;
-}
 
 /*/////////////CONTENT END///////////////*/
 
+
 /*/////////////FOOTER BEGIN///////////////*/
 footer{
+    position: absolute;
+    bottom: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -437,78 +344,32 @@ footer h3{
 }
 /*/////////////FOOTER END///////////////*/
 
+
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 --------------------property on laptop----------------------*/
 @media (min-width: 800px) {
     /*default stuff*/
-
-      
 }
 
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 ---------------------property on mobil----------------------*/
 @media (max-width: 800px) { 
-    header, .content, .box, footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .row , .row *{
+       display: flex;
+       flex-direction: column;
+       height: auto;
     }
-}
-
-/* ///////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
----------------------import all font----------------------- */
-@font-face {
-    font-family: "UnistraA-Regular";
-    src: url("font/UnistraA-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Italic";
-    src: url("font/UnistraA-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Bold";
-    src: url("font/UnistraA-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "UnistraB-Regular";
-    src: url("font/UnistraB-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraB-Italic";
-    src: url("font/UnistraB-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraB-Bold";
-    src: url("font/UnistraB-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "UnistraC-Regular";
-    src: url("font/UnistraC-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraC-Italic";
-    src: url("font/UnistraC-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraC-Bold";
-    src: url("font/UnistraC-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "UnistraD-Regular";
-    src: url("font/UnistraD-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraD-Italic";
-    src: url("font/UnistraD-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraD-Bold";
-    src: url("font/UnistraD-Bold.ttf") format("truetype");
+    .row{
+        height: auto;
+    }
+    .presentation{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .profil{
+        height: auto;
+    }
 }
