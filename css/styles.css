@@ -4,29 +4,29 @@
 /* Font UnistraA */
 @font-face {
     font-family: "UnistraA-Regular";
-    src: url("/font/UnistraA-Regular.ttf") format("truetype");
+    src: url("../font/UnistraA-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "UnistraA-Italic";
-    src: url("/font/UnistraA-Italic.ttf") format("truetype");
+    src: url("../font/UnistraA-Italic.ttf") format("truetype");
 }
 @font-face {
     font-family: "UnistraA-Bold";
-    src: url("/font/UnistraA-Bold.ttf") format("truetype");
+    src: url("../font/UnistraA-Bold.ttf") format("truetype");
 }
 
 /* Font UnistraB */
 @font-face {
     font-family: "UnistraB-Regular";
-    src: url("/font/UnistraB-Regular.ttf") format("truetype");
+    src: url("../font/UnistraB-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "UnistraB-Italic";
-    src: url("/font/UnistraB-Italic.ttf") format("truetype");
+    src: url("../font/UnistraB-Italic.ttf") format("truetype");
 }
 @font-face {
     font-family: "UnistraB-Bold";
-    src: url("/font/UnistraB-Bold.ttf") format("truetype");
+    src: url("../font/UnistraB-Bold.ttf") format("truetype");
 }
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
