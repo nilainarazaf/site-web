@@ -221,7 +221,7 @@ main{
     height: 100vh;
     overflow: hidden;
     /* background */
-    background-image: url("/img/bkgr_squart.svg");
+    background-image: url("../img/bkgr_squart.svg");
     background-attachment: fixed;
     animation: moveBackground 50s linear infinite;
 }
@@ -383,7 +383,7 @@ main{
     flex-direction: column;
     align-items: center;
     /* background */
-    background-image: url("/img/bkgr_1.svg");
+    background-image: url("../img/bkgr_1.svg");
     background-attachment: fixed;
 }
 .project .intro{
