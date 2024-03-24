@@ -1,6 +1,4 @@
-<div style="max-width: 100%; border-radius: 8px;">
-    ![Signature](img/signature.svg)
-</div>
+<img src="img/signature.svg" label="Signature" style="max-width: 100%; border-radius: 8px;">    
 
 # Mon Site Web
 
