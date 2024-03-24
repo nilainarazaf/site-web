@@ -1,7 +1,4 @@
-<div style="position: relative; width: 50%;">
-    <img src="img/profile.jpg" alt="profil" style="width: 100%; border-radius: 8px;">
-    <img src="img/signature.svg" alt="signature" style="position: absolute; top: 0; left: 0; width: 30%; height: 50%; margin: 5%">
-</div>
+<img src="img/profile.jpg" alt="Profile" style="width: 40%;">
 
 # Mon Site Web
 
