@@ -1,0 +1,454 @@
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+---------------------import all font----------------------- */
+/* Font UnistraA */
+@font-face {
+    font-family: "UnistraA-Regular";
+    src: url("../font/UnistraA-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Italic";
+    src: url("../font/UnistraA-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraA-Bold";
+    src: url("../font/UnistraA-Bold.ttf") format("truetype");
+}
+
+/* Font UnistraB */
+@font-face {
+    font-family: "UnistraB-Regular";
+    src: url("../font/UnistraB-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Italic";
+    src: url("../font/UnistraB-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UnistraB-Bold";
+    src: url("../font/UnistraB-Bold.ttf") format("truetype");
+}
+/* ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+------------------------ General -------------------------- */
+
+*, 
+::after, 
+::before{
+    box-sizing: border-box;
+}
+body{
+    /* affichage */
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'UnistraA-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scrollbar-width: none; /* minceur de la barre de défilement */
+    scrollbar-color: #cccccc00 #f0f0f000; /* couleur de la barre de défilement */
+    /* background */
+    background-color: #ffffff;
+    /* texte */
+    font-size: 1.5em;
+    color: #353538;
+}
+/* titre par defaut */
+.title, 
+h3 {
+    font-size: 2em;
+    transition: 0.5s;
+    margin: 0;
+    font-family: 'UnistraA-Bold';
+}
+/* lien par defaut */
+a {
+    display: inherit;
+    color: inherit;
+    text-decoration: none;
+    transition: 0.4s ease-out;
+}
+/* liste par defaut */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+////////////////////// HEADER BEGIN ////////////////////////*/
+header{
+    background-color: #0808ad;
+    display: flex;
+    flex: 0;
+}
+/* barre de navigation */
+.navbar {
+    /* affichage */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 20px 30px;
+    transition: 0.4s ease-out;
+    /* position */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    /* background */
+    background-color: #212e53;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    /* texte */
+    color: white;
+}
+/* Items de gauche */
+.left-items {
+    order: 0; /* placer en premier à gauche */
+}
+/* Item de droite */
+.right-items {
+    order: 1; /* placer en second à gauche */
+    display: inherit;
+    justify-content: flex-end;
+}
+/* Element de gauche */
+.initial{
+    padding-left: 5px;
+    border-left: 2px solid #ce6a6b;
+    transition: 0.4s ease-out;
+}
+.initial:hover{
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+
+/* Elements de droite */
+.right-items li{
+    padding: 0 20px;
+}
+.right-items a:hover{
+    color: #fff;
+    transform: scale(1.2) translateX(-5px);
+    cursor: pointer;
+}
+/* Recherche */
+.search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Champ de recherche */
+.search-form .search-input {
+    /* affichage */
+    width: 60%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    outline: none;
+    transition: 0.4s ease-out;
+    /* background */
+    background-color: #00000000;
+    /* texte */
+    color: #a1a1a1;
+}
+/* Icon de recherche */
+.search-form .search-icon{
+    color: #ce6a6b;
+    font-size: 0.7em;
+}
+/* Bouton de recherche */
+.search-form .search-button {
+    /* affichage */
+    border: none;
+    transform: translateY(-3px); /* Mise en symetrie de bouton */
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    /* background */
+    background-color: #212e53;
+    /* texte */
+    color: #bdbdbd;
+    text-align: center;
+    font-size: 1em;
+}
+/* :hover  et :focus du champs de recherche */
+.search-form .search-input:hover, 
+.search-form .search-input:focus {
+    width: 100%;
+    background-color: #cecece;
+    color: #212e53;
+}
+/* /////////////////// HEADER END //////////////////////////*/
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+////////////////////// CONTENT BEGIN ///////////////////////*/
+main{
+    /* affichage */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background */
+    background-color: #ffffff;
+    /* texte */
+    color: #212e53;
+}
+
+/* ///////////////////////////////////////////////////////////
+////////////////////// CONTACT-ME ///////////////////////// */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.content section{
+    margin: 20px 0px;
+}
+.content .contact-title{
+    width: fit-content;
+    text-align: center;
+    font-family: 'UnistraB-Regular';
+    font-size: 3em;
+    border-bottom: 2px solid #ce6a6b;
+}
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact-me ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-me li{
+    padding: 20px;
+}
+.contact-me .fa{
+    font-size: 2em;
+}
+.contact-me .contact-value {
+    font-size: 0.8em;
+}
+.contact-me.fa-phone{
+    color: #353538;
+}
+.contact-me .fa-graduation-cap{
+    color: #ce6a6b;
+}
+.other-contact{
+    width: 100vw;
+}
+.other-contact ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.other-contact li{
+    margin: 10px 50px;
+}
+
+/* ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+////////////////////// FOOTER BEGIN ////////////////////////*/
+footer{
+    /* affichage */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* background */
+    background-color: rgb(22, 22, 22);
+    /* texte */
+    color: #a1a1a1;
+    font-size: 1.0rem;
+}
+/* section pour le Nom avec une balise h3 */
+footer .title{
+    font-family: 'UnistraA-Bold','Courier New', Courier, monospace;
+    text-decoration: none;
+    color: #a1a1a1;
+    font-size: 1.5rem;
+}
+/* section pour les informations */
+footer .info{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 10px 0;
+}
+/* section copyright */
+footer .copyright{
+    /* affichage */
+    padding: 5px;
+    /* texte */
+    font-size: medium;
+    text-align: center;
+    font-size: 1rem;
+}
+/* Element nom */
+footer .name{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    margin-top: 50px;
+    cursor: pointer;
+}
+/* section contacts */
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10vw;
+    border-left: 2px solid #a1a1a1;
+    padding-left: 10vw;
+}
+/* section pour les reseaux */
+footer .network{
+    display: flex;
+    flex-direction: row;
+}
+footer .network li, footer .phone li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+/* les icons pour les reseaux */
+footer .fa {
+    color : #a1a1a1;
+    transition: 0.4s ease-out;
+}
+footer .network .fa:hover{
+    transform: scale(1.4) translateY(-20%);
+}
+footer .fa-facebook:hover,
+main .fa-facebook {
+    color: #3b5998;
+}
+footer .fa-twitter:hover,
+main .fa-twitter {
+    color: #5d8ffa;
+}
+footer .fa-instagram:hover,
+main .fa-instagram {
+    color: #e64545;
+}
+footer .fa-linkedin:hover,
+main .fa-linkedin {
+    color: #2851a8;
+}
+footer .fa-google:hover {
+    color: #bd1111;
+}
+
+/* ///////////////////////////////////////////////////////////
+////////////////////// CONTENT END /////////////////////////*/
+
+
+
+
+/* ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/////////////////////// OTHER DEVICES /////////////////////////
+//////////////////////////////////////////////////////////// */
+
+/* Styles pour les smartphones (petits écrans) */
+@media (max-width: 767px) {
+    *{
+        font-size: 15px;
+    }
+    /* ////////// HEADER /////////// */
+    .navbar {
+        /* affichage */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* position */
+        position: static;
+    }
+    /* Item de droite */
+    .right-items {
+        display: flex;
+        flex-direction: column
+    }
+    /* ////////// CONTENT /////////// */
+    .row{
+        /* affichage */
+        min-height: fit-content;
+    }
+    .welcome{
+        font-size: 40px;
+    }
+    .profil .detail {
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        width: 90%;
+    }
+    /* section image : container de l'image*/
+    .profil .img {
+        width: 80%;
+        opacity: 1;
+    }
+    /* modification au cas de :hover sur la ligne  */
+    .modified-profil .img{
+        animation: none;
+    }
+    /* ////////// FOOTER /////////// */
+    footer, .info, .network {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* section contacts */
+    .contact {
+        justify-content: center;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top: 10vh;
+        padding-top: 10vh;
+        border-top: 2px solid #a1a1a1;
+        border-left: 0px;
+    }
+}
+
+/* Styles pour les tablettes (écrans moyens à grands) */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Styles pour les télévisions (grands écrans) */
+@media (min-width: 1200px) {
+
+}

@@ -89,7 +89,43 @@ const projects = [
 /////////////////////////////////////
 
 /////////////////////////////////////
-/// Affichage des modifications dans les cas d'affichage de la section en question
+// Chargement du fichier JSON avec les projets
+function loadProjects() {
+    const selection = document.getElementById('selection');
+
+    // Parcourir les projets et les ajouter au conteneur
+    projects.forEach(project => {
+        const projectHTML = `
+            <article class="box">
+                <section class="img"><img src="${project.image}" alt="illustration"></section>
+                <section class="text">
+                    <h2>${project.title}</h2>
+                    <p>${project.description}</p>
+                    <p>${project.features}</p>
+                    <p class="read-more modal-trigger">Plus de détails<span class="arrow"></span></p>
+                    
+                    <!-- Fenêtre modal en js -->
+                    <article class="modal-container" id="${project.modalId}">
+                        <div class="overlay modal-trigger"></div>
+                        <div class="modal" role="dialog">
+                            <i class="close-modal modal-trigger fa-solid fa-circle-xmark"></i>
+                            <section><img src="${project.modalImage}" alt="illustration"></section>
+                            <h2>${project.title}</h2>
+                            <article>${project.modalFurtherDescription}</article>
+                            <p>ref : <a href="${project.modalLink}">${project.modalLink}</a></p>
+                        </div>
+                    </article>
+                    <!-- /////////////////// -->
+
+                </section>
+            </article>
+        `;
+        selection.innerHTML += projectHTML;
+    });
+}
+
+// Affichage des modifications lors de l'intersection avec les éléments
+function setupIntersectionObserver() {
     const presentation = document.querySelector('.presentation');
     const profil = document.querySelector('.profil');
 
@@ -112,50 +148,54 @@ const projects = [
             }
         });
     }, options);
-
     observer.observe(presentation);
     observer.observe(profil);
+}
 
-
-/////////////////////////////////////
-/// Affichage de Nom 
+// Affichage du nom avec effet d'écriture
+function displayFullName() {
     const textContainer = document.getElementById('nom');
     const textToDisplay = 'Nilaina Michael Razafindrambola';
 
     let index = 0;
 
-    function displayNextCharacter() {
+    const displayNextCharacter = () => {
         if (index < textToDisplay.length) {
             const char = textToDisplay.charAt(index);
             textContainer.textContent += char;
             index++;
 
-            if(char === ' '){
+            if (char === ' ') {
                 setTimeout(displayNextCharacter, 200); // Delai de 200ms si le caractère est un espace
             } else {
                 setTimeout(displayNextCharacter, 100); // Delai de 100ms entre chaque caractere (ajustable selon vos besoins)
             }
         }
-    }
-    displayNextCharacter();
+    };
 
-/////////////////////////////////////
-/// Affichage des detailles du projet
-    // Sélectionnez tous les boutons "Plus de détails" qui doivent ouvrir le modal
+    displayNextCharacter(); // Appel initial de la fonction
+}
+
+// Gestion des événements click sur les boutons "Plus de détails"
+function setupModalTriggers() {
     const modalTriggers = document.querySelectorAll(".read-more.modal-trigger");
 
     // Ajoutez un écouteur d'événements click à chaque bouton
     modalTriggers.forEach(trigger => {
-        trigger.addEventListener("click", (event) => {
+        trigger.addEventListener("click", () => {
             // Selectionnez le modal correspondant à ce bouton
             const modalId = trigger.closest('.box').querySelector('.modal-container').getAttribute('id');
             const modal = document.getElementById(modalId);
 
             modal.classList.add("active");
             event.preventDefault();
+            console.log(modal.classList);
         });
     });
+}
 
+// Gestion des événements click sur les boutons de fermeture de modal
+function setupCloseButtons() {
     // Selectionnez tous les boutons de fermeture de modal
     const closeButtons = document.querySelectorAll(".close-modal");
 
@@ -165,9 +205,10 @@ const projects = [
             modal.classList.remove("active");
         });
     });
+}
 
-/////////////////////////////////////
-/// Affichage sticky
+// Affichage sticky de l'élément intro
+function setupStickyIntro() {
     window.addEventListener('scroll', function() {
         const introElement = document.querySelector('.project .intro');
         const introRect = introElement.getBoundingClientRect();
@@ -178,44 +219,17 @@ const projects = [
             introElement.classList.remove('intro-top');
         }
     });
+}
 
-/////////////////////////////////////
-// Fonction pour charger et afficher les projets à partir du fichier JSON
-    function loadProjects() {
-        const selection = document.getElementById('selection');
+// Fonction principale pour initialiser toutes les fonctionnalités
+function initialize() {
+    // loadProjects(); // Chargement des projets
+    setupIntersectionObserver(); // Observateur d'intersection
+    displayFullName(); // Affichage du nom
+    // setupModalTriggers(); // Gestion des boutons "Plus de détails"
+    setupCloseButtons(); // Gestion des boutons de fermeture de modal
+    setupStickyIntro(); // Affichage sticky de l'élément intro
+}
 
-        // Parcourir les projets et les ajouter au conteneur
-        projects.forEach(project => {
-            const projectHTML = `
-                <article class="box">
-                    <section class="img"><img src="${project.image}" alt="illustration"></section>
-                        <section class="text">
-                            <h2>${project.title}</h2>
-                            <p>
-                                <ul>
-                                    <li>Description : ${project.description}</li>
-                                    <li>Fonctionnalités : ${project.features}</li>
-                                    <li>Exemple de code : ${project.modalContent}</li>
-                                </ul>
-                            </p>
-                            <p class="read-more modal-trigger">Plus de detailles<span class="arrow"></span></p>
-                            <!-- Fenetre modal en js -->
-                            <article class="modal-container" id="${project.modalId}">
-                                <div class="overlay modal-trigger"></div>
-                                <div class="modal" role="dialog">
-                                    <i class="close-modal modal-trigger fa-solid fa-circle-xmark"></i>
-                                    <section><img src="${project.modalImage}" alt="illustration"></section>
-                                    <h2>${project.title}</h2>
-                                    <p>${project.extend}</p>
-                                    <p>lien git : ${project.link}</p>
-                                </div>
-                            </article>
-                            <!-- /////////////////// -->
-                        </section>
-                    </section>
-                </article>
-            `;
-            selection.innerHTML += projectHTML;
-        });
-    }
-    loadProjects();
+// Exécution de la fonction initialize après le chargement complet du DOM
+document.addEventListener("DOMContentLoaded", initialize);

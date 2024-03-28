@@ -100,8 +100,14 @@ header{
     align-items: center;
     width: 100vw;
     padding: 20px 30px;
+    transition: 0.4s ease-out;
+    /* position */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     /* background */
     background-color: #212e53;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     /* texte */
     color: white;
 }
@@ -196,7 +202,7 @@ main{
     align-items: center;
     justify-content: center;
     /* background */
-    background-color: #fffb00;
+    background-color: #ffffff;
     /* texte */
     color: #212e53;
 }
@@ -577,7 +583,11 @@ main{
     font-size: 30px;
     color: #ff365e;
 }
-/* /////////////////// MODAL WINDOW END /////////////////// */
+
+/* ///////////////////////////////////////////////////////////
+////////////////////// CONTENT END /////////////////////////*/
+
+
 
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
@@ -669,26 +679,74 @@ footer .title{
     color: #2851a8;
 }
 
+/* ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/////////////////////// OTHER DEVICES /////////////////////////
+//////////////////////////////////////////////////////////// */
 
-
-/* ///////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
-////////////////////// FORM STYLE SHEETE /////////////////////
-//////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////// */
-
-/* ///////////////////////////////////////////////////////////
-////////////////////// CONTENT BEGIN ///////////////////////*/
-
-.search-row {
-    width: 60vw;
-    height: auto;
-    margin: 50px;
-    background: #00000000;
-
+/* Styles pour les smartphones (petits écrans) */
+@media (max-width: 767px) {
+    *{
+        font-size: 15px;
+    }
+    /* ////////// HEADER /////////// */
+    .navbar {
+        /* affichage */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* position */
+        position: static;
+    }
+    /* Item de droite */
+    .right-items {
+        display: flex;
+        flex-direction: column
+    }
+    /* ////////// CONTENT /////////// */
+    .row{
+        /* affichage */
+        min-height: fit-content;
+    }
+    .welcome{
+        font-size: 40px;
+    }
+    .profil .detail {
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        width: 90%;
+    }
+    /* section image : container de l'image*/
+    .profil .img {
+        width: 80%;
+        opacity: 1;
+    }
+    /* modification au cas de :hover sur la ligne  */
+    .modified-profil .img{
+        animation: none;
+    }
+    /* ////////// FOOTER /////////// */
+    footer, .info, .network {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* section contacts */
+    .contact {
+        justify-content: center;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top: 10vh;
+        padding-top: 10vh;
+        border-top: 2px solid #a1a1a1;
+        border-left: 0px;
+    }
 }
 
-/* ///////////////////////////////////////////////////////////
-////////////////////// CONTENT END /////////////////////////*/
+/* Styles pour les tablettes (écrans moyens à grands) */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
