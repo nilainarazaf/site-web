@@ -231,7 +231,7 @@ main{
 }
 .cv-show embed {
     width: 70%;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 /* bouton de telechargement */
 .btn-download {
