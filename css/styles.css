@@ -379,6 +379,160 @@ main{
     }
 }
 
+/* ///////////////////////////////////////////////////////////
+////////////////////// PROJECT /////////////////////////////*/
+#project {
+    display: block;
+    padding-bottom: 10vh;
+    background-color: #a0a0a08c;
+}
+.project .intro{
+    /* affichage */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 5px;
+    transition: 0.4s ease-out;
+    /* position */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    /* background */
+    background-color: #4a919e;
+    /* texte */
+    text-align: center;
+    font-size: 2em;
+}
+/* Styles lorsque l'élément est sticky et en haut (top: 0) */
+.project .intro.intro-top {
+    margin: 0px;
+    /* padding-top: 5px; */
+    font-size: 1.3em;
+    transition: 0.4s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+/* Styles lorsque l'élément est sticky et en haut (top: 0) */
+.project .intro.intro-top p{
+    padding: 5px;
+    margin: 0px;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+}
+.project .intro.intro-top .descrip {
+    display: none;
+    transform: 0.4s ease-out;
+}
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project img{
+    width: 70%;
+}
+.project .slide section, .project .slide section img{
+    padding: 10px;
+}
+.project img:first-child{
+    float: left;
+    width: 50%;
+}
+
+.project ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project li {
+    flex: 0 0 100%;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.project .slide a{
+    display: inline;
+    color: #2851a8;
+}
+
+#prev, #next {
+    height: 50%;
+    width: 5vw;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+#prev i, #next i{
+    transition: transform 0.5s ease-in-out;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#prev:hover, #next:hover {
+    transition: 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#prev:hover i, #next:hover i{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(2.5);
+}
+
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.indicators div:hover{
+    transform: scale(200%);
+    margin: 0 1em;
+    transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: #798197;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.indicators .active {
+    background-color: #212e53;
+}
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// CONTENT END /////////////////////////*/
