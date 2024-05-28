@@ -1,32 +1,23 @@
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 ---------------------import all font----------------------- */
-/* Font UnistraA */
+
+/* Font Distrampler */
 @font-face {
-    font-family: "UnistraA-Regular";
-    src: url("../font/UnistraA-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Italic";
-    src: url("../font/UnistraA-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Bold";
-    src: url("../font/UnistraA-Bold.ttf") format("truetype");
+    font-family: "Distrampler";
+    src: url("../font/Distrampler.ttf") format("truetype");
 }
 
-/* Font UnistraB */
+/* Font Metanoia */
 @font-face {
-    font-family: "UnistraB-Regular";
-    src: url("../font/UnistraB-Regular.ttf") format("truetype");
+    font-family: "Metanoia";
+    src: url("../font/Metanoia.ttf") format("truetype");
 }
+
+/* Font Geolight */
 @font-face {
-    font-family: "UnistraB-Italic";
-    src: url("../font/UnistraB-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraB-Bold";
-    src: url("../font/UnistraB-Bold.ttf") format("truetype");
+    font-family: "Geolight";
+    src: url("../font/Geolight.ttf") format("truetype");
 }
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
@@ -49,13 +40,13 @@ body{
     max-height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: 'UnistraA-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Metanoia','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scrollbar-width: none; /* minceur de la barre de défilement */
     scrollbar-color: #cccccc00 #f0f0f000; /* couleur de la barre de défilement */
     /* background */
     background-color: #ffffff;
     /* texte */
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: #353538;
 }
 /* titre par defaut */
@@ -64,7 +55,7 @@ h3 {
     font-size: 2em;
     transition: 0.5s;
     margin: 0;
-    font-family: 'UnistraA-Bold';
+    font-family: 'Distrampler';
 }
 /* lien par defaut */
 a {
@@ -105,6 +96,7 @@ header{
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    z-index: 2;
     /* background */
     background-color: #212e53;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -335,9 +327,15 @@ main{
     padding-top: 0px;
     /* background */
     background-color: #0808ad00;
+    /*texte*/
+    line-height: 1.7em;
+}
+.text a{
+    display: inline;
+    color: #2851a8;
 }
 #nom{
-    font-family: 'UnistraA-Bold';
+    font-family: 'Distrampler';
     font-size: 1.8em;
 }
 /* section image : container de l'image*/
@@ -381,208 +379,6 @@ main{
     }
 }
 
-/* ///////////////////////////////////////////////////////////
-////////////////////// PROJECT ROW /////////////////////////*/
-.project{
-    /* affichage */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background */
-    background-image: url("../img/bkgr_1.svg");
-    background-attachment: fixed;
-}
-.project .intro{
-    /* affichage */
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0px;
-    padding: 5px;
-    transition: 0.4s ease-out;
-    /* position */
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    /* background */
-    background-color: #4a919e;
-    /* texte */
-    text-align: center;
-    font-size: 2em;
-    font-family: 'UnistraA-Bold','Courier New', Courier, monospace;
-}
-/* Styles lorsque l'élément est sticky et en haut (top: 0) */
-.project .intro.intro-top {
-    margin: 0px;
-    /* padding-top: 5px; */
-    font-size: 1.3em;
-    transition: 0.4s ease-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-/* Styles lorsque l'élément est sticky et en haut (top: 0) */
-.project .intro.intro-top p{
-    padding: 5px;
-    margin: 0px;
-    transition: 0.4s ease-out;
-    cursor: pointer;
-}
-.project .intro.intro-top .descrip {
-    display: none;
-    transform: 0.4s ease-out;
-}
-.project .fa-displ{
-    display: none;
-    font-size: 1.1em;
-    transition: 0.4s ease-out;
-}
-.project .intro.intro-top .fa-displ{
-    display: flex;
-    transition: 0.4s ease-out;
-}
-
-/* selection des projets */
-.selection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/* container de chaque projet */
-.box {
-    /* affichage */
-    display: inline-block;
-    margin: 150px 0px 50px 0px;
-    background-color: #242020;
-    border-radius: 10px;
-    width: 70vw;
-    /* texte */
-    color: rgb(151, 151, 151);
-}
-/* Image d'illustration du projet */
-.box .img{
-    display: flex;
-    justify-content: center;
-}
-.box img{
-    /* affichage */
-    clip: auto;
-    border-radius: 7px;
-    margin: 2rem;
-    max-height: 20vh;
-    max-width: 30%;
-    /* position */
-    position: relative;
-    transform: scale(210%) translateY(-20%);
-}
-.box .text {
-    width: 100%;
-}
-.read-more{
-    /* affichage */
-    width: fit-content;
-    padding: 0.5em 1.0em;
-    border-radius: 5px;
-    transition: 0.3s ease-out;
-    cursor: pointer;
-    /* background */
-    background-color: rgba(255, 255, 255, 0.781);
-    /* texte */
-    color: #292424;
-}
-.read-more:hover{
-    background-color: rgb(116, 109, 109);
-    transition: 0.3s ease-out;
-}
-
-/* //////////////////////////////////////////////////////////
-////////////////////// MODAL WINDOW BEGIN //////////////// */
-
-/* fenetre pour les detailles des projets */
-.modal-container{
-    /* affichage */
-    visibility: hidden;
-    width: 100vw;
-    height : 100vh;
-    overflow: auto;
-    transition: visibility 0.2s;
-    /* position */
-    position: fixed;
-    z-index: 3;
-    bottom: 0;
-    left: 0;
-}
-/* titre du projet */
-.modal-container h2{
-    margin-right: 10%;
-    text-align: right;
-}
-.modal-container img{
-    /* affichage */
-    clip: auto;
-    border-radius: 7px;
-    margin: 2rem;
-    /* position */
-    position: relative;
-    transform: scale(220%) translateY(-10%);
-}
-/* affiche toute la fenetre quand :active*/
-.modal-container.active{
-    transition: visibility 0.2s;
-    visibility: visible;
-}
-/* layout pour un fond grisé */
-.overlay{
-    /* affichage */
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.2s 0.2s ease-out;
-    opacity: 0;
-    /* position */
-    position :fixed;
-    /* background */
-    background: #333333d3;
-}
-/* affiche le fond gris quand :active */
-.modal-container.active .overlay{
-    opacity: 1;
-    transition: opacity 0.2s ease-out;
-}
-/* fenetre avec contenus*/
-.modal {
-    /* affichage */
-    border-radius: 10px;
-    width: 80vw;
-    padding: 30px;
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-    /* position */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30vh);
-    /* background */
-    background: #fff;
-    /* texte */
-    color: #4d4d4d;
-}
-/* affiche la fenetre avec contenus quand :active */
-.modal-container.active .modal{
-    opacity: 1;
-    transition: opacity 0.2s 0.2s ease-out;
-}
-/* icon de fermeture */
-.close-modal{
-    /* affichage */
-    cursor: pointer;
-    /* position */
-    position: absolute;
-    transform: translate(-50%, -50%);
-    right: 0;
-    /* texte */
-    font-size: 30px;
-    color: #ff365e;
-}
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// CONTENT END /////////////////////////*/
@@ -607,10 +403,10 @@ footer{
 }
 /* section pour le Nom avec une balise h3 */
 footer .title{
-    font-family: 'UnistraA-Bold','Courier New', Courier, monospace;
+    font-family: inherit;
     text-decoration: none;
     color: #a1a1a1;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 /* section pour les informations */
 .info{

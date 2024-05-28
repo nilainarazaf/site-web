@@ -1,32 +1,23 @@
 /* ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 ---------------------import all font----------------------- */
-/* Font UnistraA */
+
+/* Font Distrampler */
 @font-face {
-    font-family: "UnistraA-Regular";
-    src: url("../font/UnistraA-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Italic";
-    src: url("../font/UnistraA-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraA-Bold";
-    src: url("../font/UnistraA-Bold.ttf") format("truetype");
+    font-family: "Distrampler";
+    src: url("../font/Distrampler.ttf") format("truetype");
 }
 
-/* Font UnistraB */
+/* Font Metanoia */
 @font-face {
-    font-family: "UnistraB-Regular";
-    src: url("../font/UnistraB-Regular.ttf") format("truetype");
+    font-family: "Metanoia";
+    src: url("../font/Metanoia.ttf") format("truetype");
 }
+
+/* Font Geolight */
 @font-face {
-    font-family: "UnistraB-Italic";
-    src: url("../font/UnistraB-Italic.ttf") format("truetype");
-}
-@font-face {
-    font-family: "UnistraB-Bold";
-    src: url("../font/UnistraB-Bold.ttf") format("truetype");
+    font-family: "Geolight";
+    src: url("../font/Geolight.ttf") format("truetype");
 }
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
@@ -49,13 +40,13 @@ body{
     max-height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: 'UnistraA-Regular','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Metanoia','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scrollbar-width: none; /* minceur de la barre de défilement */
     scrollbar-color: #cccccc00 #f0f0f000; /* couleur de la barre de défilement */
     /* background */
     background-color: #ffffff;
     /* texte */
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: #353538;
 }
 /* titre par defaut */
@@ -64,7 +55,7 @@ h3 {
     font-size: 2em;
     transition: 0.5s;
     margin: 0;
-    font-family: 'UnistraA-Bold';
+    font-family: 'Distrampler';
 }
 /* lien par defaut */
 a {
@@ -273,10 +264,10 @@ footer{
 }
 /* section pour le Nom avec une balise h3 */
 footer .title{
-    font-family: 'UnistraA-Bold','Courier New', Courier, monospace;
+    font-family: inherit;
     text-decoration: none;
     color: #a1a1a1;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 /* section pour les informations */
 footer .info{
