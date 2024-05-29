@@ -248,7 +248,7 @@ main{
     z-index: 1; /* positionnement au dessus de .left-side img */
     cursor: pointer;
     /* background */
-    background: linear-gradient(to right, #00000000, #bed3c39a, #bed0d3, #a6c9cf, #70b0bbe3, #4a919e);
+    background: linear-gradient(to right, #00000000, #becbd39a, #bed0d3, #a6c9cf, #70b0bbe3, #4a919e);
     /* texte */
     text-align: right;
     /* animation d'affichage */
