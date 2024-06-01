@@ -244,12 +244,29 @@ main{
 .contact-me .contact-value {
     font-size: 0.8em;
 }
-.contact-me.fa-phone{
+.contact-me .fa-phone{
     color: #353538;
 }
 .contact-me .fa-graduation-cap{
     color: #ce6a6b;
 }
+.contact-me .fa-linkedin {
+    color: #2851a8;
+}
+
+.other-contact .fa-facebook {
+    font-size: x-large;
+    color: #3b5998;
+}
+.other-contact .fa-twitter {
+    font-size: x-large;
+    color: #5d8ffa;
+}
+.other-contact .fa-instagram {
+    font-size: x-large;
+    color: #e64545;
+}
+
 .other-contact{
     width: 100vw;
 }
@@ -265,6 +282,7 @@ main{
 
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
+
 
 
 /* ///////////////////////////////////////////////////////////
@@ -291,14 +309,14 @@ footer .title{
     font-size: 1.1rem;
 }
 /* section pour les informations */
-footer .info{
+.info{
     display: flex;
     flex-direction: row;
     padding: 20px;
     margin: 10px 0;
 }
 /* section copyright */
-footer .copyright{
+.copyright{
     /* affichage */
     padding: 5px;
     /* texte */
@@ -307,7 +325,7 @@ footer .copyright{
     font-size: 1rem;
 }
 /* Element nom */
-footer .name{
+.name{
     display: flex;
     justify-content: center;
     width: 30vw;
@@ -315,7 +333,7 @@ footer .name{
     cursor: pointer;
 }
 /* section contacts */
-footer .contact {
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -341,28 +359,25 @@ footer .fa {
 footer .network .fa:hover{
     transform: scale(1.4) translateY(-20%);
 }
-footer .fa-facebook:hover,
-main .fa-facebook {
+footer .fa-facebook:hover {
     color: #3b5998;
 }
-footer .fa-twitter:hover,
-main .fa-twitter {
+footer .fa-twitter:hover {
     color: #5d8ffa;
 }
-footer .fa-instagram:hover,
-main .fa-instagram {
+footer .fa-instagram:hover {
     color: #e64545;
-}
-footer .fa-linkedin:hover,
-main .fa-linkedin {
-    color: #2851a8;
 }
 footer .fa-google:hover {
     color: #bd1111;
 }
+footer .fa-linkedin:hover {
+    color: #2851a8;
+}
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// CONTENT END /////////////////////////*/
+
 
 
 
@@ -373,7 +388,7 @@ footer .fa-google:hover {
 //////////////////////////////////////////////////////////// */
 
 /* Styles pour les smartphones (petits écrans) */
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     *{
         font-size: 15px;
     }
@@ -386,34 +401,25 @@ footer .fa-google:hover {
         /* position */
         position: static;
     }
+    .navbar li{
+        margin: 20px;
+    }
     /* Item de droite */
     .right-items {
         display: flex;
         flex-direction: column
     }
     /* ////////// CONTENT /////////// */
-    .row{
+    .content{
         /* affichage */
+        margin: 25vw;
         min-height: fit-content;
     }
-    .welcome{
-        font-size: 40px;
-    }
-    .profil .detail {
+    .contact-me ul{
         display: flex;
         flex-direction: column;
-    }
-    .text{
-        width: 90%;
-    }
-    /* section image : container de l'image*/
-    .profil .img {
-        width: 80%;
-        opacity: 1;
-    }
-    /* modification au cas de :hover sur la ligne  */
-    .modified-profil .img{
-        animation: none;
+        justify-content: center;
+        align-items: center;
     }
     /* ////////// FOOTER /////////// */
     footer, .info, .network {
@@ -422,6 +428,9 @@ footer .fa-google:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .network .fa {
+        margin: 10px;
     }
     /* section contacts */
     .contact {
@@ -433,13 +442,4 @@ footer .fa-google:hover {
         border-top: 2px solid #a1a1a1;
         border-left: 0px;
     }
-}
-
-/* Styles pour les tablettes (écrans moyens à grands) */
-@media (min-width: 768px) and (max-width: 1023px) {
-}
-
-/* Styles pour les télévisions (grands écrans) */
-@media (min-width: 1200px) {
-
 }
