@@ -157,18 +157,7 @@ function setupStickyIntro() {
     });
 }
 
-function setupFixedArrow() {
-    window.addEventListener('scroll', function() {
-        const introElement = document.querySelector('.slide button');
-        const introRect = introElement.getBoundingClientRect();
-        
-        if (introRect.top === 0 && window.getComputedStyle(introElement).position === 'fixed') {
-            introElement.classList.add('fixed-arrow');
-        } else {
-            introElement.classList.remove('fixed-arrow');
-        }
-    });
-}
+
 
 
 // Fonction principale pour initialiser toutes les fonctionnalités

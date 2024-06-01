@@ -59,7 +59,7 @@ h3 {
 }
 /* lien par defaut */
 a {
-    display: inherit;
+    display: inline-block;
     color: inherit;
     text-decoration: none;
     transition: 0.4s ease-out;
@@ -499,11 +499,6 @@ main{
     transition: 0.5s ease-in-out;
 }
 
-.fixed-arrow {
-    position: fixed;
-    transition: 0.5s ease-in-out;
-}
-
 #prev i, #next i{
     transition: transform 0.5s ease-in-out;
     transform: scale(2.5);
@@ -732,3 +727,49 @@ footer .fa-linkedin:hover {
         border-left: 0px;
     }
 }
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////
+//////////// SECTION A METTRE A JOUR ///////////*/
+
+/*////////////////////////////////////////////////
+//////////// PROJET ACTUEL /////////////////////*/
+#current a{
+    color: #2851a8;
+}
+#current h1{
+    font-size: 2.0em;
+}
+#current{
+    background-image: url("/img/tmp/two-tone.png");
+    background-size: cover;
+    padding: 5vw 17vw;
+    box-sizing: border-box;
+}
+#current img{
+    float: right;
+    width: 20vw;
+}
+#current .enterprise img{
+    width: unset;
+}
+#current ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #current ul {
+        display: inline;
+        text-align: center;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////*/
