@@ -39,7 +39,7 @@
 // }
 
 // Affichage des modifications lors de l'intersection avec les éléments
-function setupIntersectionObserver() {
+function focusElement() {
     const presentation = document.querySelector('.presentation');
     const profil = document.querySelector('.profil');
 
@@ -156,17 +156,46 @@ function setupStickyIntro() {
         }
     });
 }
+function focusRow() {
+    const rows = document.querySelectorAll('.row');
 
+    const options = {
+        threshold: 0.3 // Déclencher lorsque 30% de l'élément est visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                rows.forEach(row => {
+                    if (entry.target === row) {
+                        row.classList.add('focus-row');
+                    }
+                });
+            } else {
+                rows.forEach(row => {
+                    if (entry.target === row) {
+                        row.classList.remove('focus-row');
+                    }
+                });
+            }
+        });
+    }, options);
+
+    rows.forEach(row => {
+        observer.observe(row); // Observer chaque élément individuellement
+    });
+}
 
 
 
 // Fonction principale pour initialiser toutes les fonctionnalités
 function initialize() {
     // loadProjects(); // Chargement des projets
-    setupIntersectionObserver(); // Observateur d'intersection
+    focusElement(); // Observateur d'intersection
     displayFullName(); // Affichage du nom
     projectAnime(); //Anime les projets
     setupStickyIntro(); //
+    focusRow();
 }
 
 // Exécution de la fonction initialize après le chargement complet du DOM

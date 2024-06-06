@@ -199,12 +199,18 @@ main{
     color: #212e53;
 }
 .row{
+    opacity: 0;
     /* affichage */
     display: flex;
     min-height: 100vh;
     min-width: 100vw;
     /* background */
     background-color: #ffffff;
+    transition: 0.5s ease-out;
+}
+.focus-row{
+    opacity: 1;
+    transition: 0.5s ease-out;
 }
 
 /* ///////////////////////////////////////////////////////////
@@ -381,10 +387,13 @@ main{
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// PROJECT /////////////////////////////*/
-#project {
+.project {
     display: block;
     padding-bottom: 10vh;
-    background-color: #a0a0a08c;
+}
+.project .row {
+    /* affichage */
+    display: inherit;
 }
 .project .intro{
     /* affichage */
@@ -432,9 +441,9 @@ main{
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-out;
+    /* transition: transform 0.5s ease-in-out; */
 }
-
 .project img{
     width: 70%;
 }
@@ -702,6 +711,10 @@ footer .fa-linkedin:hover {
         float: none;
         width: 100%;
     }
+    .project article {
+        width: inherit;
+        padding: 10px;
+    }
     #prev, #next {
         width: 10vw;
     }
@@ -740,15 +753,20 @@ footer .fa-linkedin:hover {
 //////////// PROJET ACTUEL /////////////////////*/
 #current a{
     color: #2851a8;
+    font-size: inherit;
+    font-weight: inherit;
 }
 #current h1{
     font-size: 2.0em;
 }
 #current{
-    background-image: url("/img/tmp/two-tone.png");
+    background-image: url("/img/tmp/liquid-cheese.svg");
     background-size: cover;
+    background-position: left;
+    animation: bkgAnime 10s linear infinite;
     padding: 5vw 17vw;
     box-sizing: border-box;
+    transition: 0.5s ease-in-out;
 }
 #current img{
     float: right;
@@ -761,6 +779,13 @@ footer .fa-linkedin:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+@keyframes bkgAnime {
+    0% { background-position: 0 0; /* Position de depart */
+    }
+    100% { background-position: 100% 0; /* Position finale (deplace le degrade jusqu'au bout) */
+    }
 }
 
 @media only screen and (max-width: 600px) {
