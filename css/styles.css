@@ -763,7 +763,7 @@ footer .fa-linkedin:hover {
     background-image: url("/img/tmp/liquid-cheese.svg");
     background-size: cover;
     background-position: left;
-    animation: bkgAnime 10s linear infinite;
+    animation: moveBackground 50s linear infinite;
     padding: 5vw 17vw;
     box-sizing: border-box;
     transition: 0.5s ease-in-out;
@@ -781,12 +781,6 @@ footer .fa-linkedin:hover {
     align-items: center;
 }
 
-@keyframes bkgAnime {
-    0% { background-position: 0 0; /* Position de depart */
-    }
-    100% { background-position: 100% 0; /* Position finale (deplace le degrade jusqu'au bout) */
-    }
-}
 
 @media only screen and (max-width: 600px) {
     #current ul {
