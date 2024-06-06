@@ -115,7 +115,7 @@ function projectAnime(){
     const indicators = document.querySelectorAll('.indicators div');
 
     function showSlide(i) {
-        ul.style.transform = `translateX(-${i * 100}%)`;
+        ul.style.transform = `translateX(-${i * 150}%)`;
     }
 
     function updateSlides() {
