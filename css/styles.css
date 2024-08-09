@@ -277,6 +277,35 @@ main{
 .quote{
     color: #ce6a6b;
 }
+.right-side:hover .quote-before{
+    animation: moveCircle 2s ease-in-out 0.5s, bounceBack 0.5s ease-in-out 2.5s;
+}
+.right-side:hover .quote-after{
+    animation: bounceBack 0.5s ease-in-out 2.5s;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform-origin: 400% 0%;
+        transform: rotate(0);
+    }
+    100% {
+        transform-origin: -600% -50%;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bounceBack {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 /* Modification en cas de :hover traiter sur javascript */
 .modified-presentation .right-side{
@@ -307,7 +336,13 @@ main{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    /* background */
+    background: linear-gradient(to top, #bebebe, #d8d8d8, #00000000);
+    
 }
+
+
+
 /* section titre/intro du profil */
 .intro{
     display: flex;
@@ -355,7 +390,7 @@ main{
 .profil .img img{
     width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 100%;
     filter: grayscale(100%);
     transition: 0.2s ease-out;
 }
@@ -394,6 +429,9 @@ main{
 .project .row {
     /* affichage */
     display: inherit;
+    background-image: url("/img/intersecting-waves-scattered.svg");
+    background-size: cover;
+    animation: moveBackground 250s linear infinite;
 }
 .project .intro{
     /* affichage */
@@ -446,9 +484,11 @@ main{
 }
 .project img{
     width: 70%;
+    border: 1px solid #999999;
+    border-radius: 5px;
 }
 .project .slide section, .project .slide section img{
-    padding: 10px;
+    margin: 20px;
 }
 .project img:first-child{
     float: left;
@@ -749,35 +789,37 @@ footer .fa-linkedin:hover {
 //////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*////////////////////////////////////////////////
-//////////// SECTION A METTRE A JOUR ///////////*/
+//////////// SECTION TO UPDATE ///////////*/
 
 /*////////////////////////////////////////////////
-//////////// PROJET ACTUEL /////////////////////*/
-#current a{
+//////////// LATEST PROJECT /////////////////////*/
+#latest-project a{
     color: #2851a8;
     font-size: inherit;
     font-weight: inherit;
 }
-#current h1{
+#latest-project h1{
     font-size: 2.0em;
 }
-#current{
-    background-image: url("/img/tmp/liquid-cheese.svg");
-    background-size: cover;
-    background-position: left;
-    animation: moveBackground 50s linear infinite;
+#latest-project{
+    background: linear-gradient(to left, #00000000, #dcdcdc, #dcdcdc, #dcdcdc), url("/img/tmp/3d.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #dcdcdc;
+    /* animation: moveBackground 50s linear infinite; */
     padding: 5vw 17vw;
     box-sizing: border-box;
     transition: 0.5s ease-in-out;
 }
-#current img{
+#latest-project img{
     float: right;
     width: 20vw;
 }
-#current .enterprise img{
+#latest-project .enterprise img{
     width: unset;
 }
-#current ul {
+#latest-project ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -785,10 +827,34 @@ footer .fa-linkedin:hover {
 
 
 @media only screen and (max-width: 600px) {
-    #current ul {
+    #latest-project ul {
         display: inline;
         text-align: center;
     }
+}
+
+
+/*//////////////////////////////////////////////////
+//////////// PERSONNAL PROJECT /////////////////////*/
+#personnal-project{
+    background-image: linear-gradient(to top, #ffffff48, #ffffff48), url("/img/tmp/ar-vr-medical-imaging-1364x682.jpeg");
+    background-size: cover;
+    background-position: top;
+
+    font-size: 3em;
+    color: #dcdcdc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*////////////////////////////////////////////////
+//////////// CURRENT PROJECT /////////////////////*/
+#current-project{
+    background-image: url("/img/tmp/how-to-surive-third-year-university-1.webp");
+    background-size: cover;
+    background-position: top;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////
