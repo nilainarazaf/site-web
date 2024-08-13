@@ -494,6 +494,21 @@ main{
     float: left;
     width: 50%;
 }
+.project h2{
+    display: inline-flex;
+    align-items: center;
+}
+.project .fa {
+    color: #ce6a6b;
+    font-size: 150%;
+    margin-left: 7vw;
+    margin-right: 20px;
+}
+.project h3{
+    display: inline;
+    color: #ce6a6b;
+    font: inherit;
+}
 
 .project ul {
     display: flex;
@@ -594,6 +609,8 @@ main{
 .indicators .active {
     background-color: #212e53;
 }
+
+
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// CONTENT END /////////////////////////*/
@@ -819,7 +836,7 @@ footer .fa-linkedin:hover {
 #latest-project .enterprise img{
     width: unset;
 }
-#latest-project ul {
+#latest-project ul, #current-project ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -827,7 +844,7 @@ footer .fa-linkedin:hover {
 
 
 @media only screen and (max-width: 600px) {
-    #latest-project ul {
+    #latest-project ul , #current-project ul{
         display: inline;
         text-align: center;
     }
@@ -837,24 +854,71 @@ footer .fa-linkedin:hover {
 /*//////////////////////////////////////////////////
 //////////// PERSONNAL PROJECT /////////////////////*/
 #personnal-project{
-    background-image: linear-gradient(to top, #ffffff48, #ffffff48), url("/img/tmp/ar-vr-medical-imaging-1364x682.jpeg");
+    background-image: linear-gradient(to top, #000000d5, #000000d5), url("/img/tmp/vr.jpg");
     background-size: cover;
     background-position: top;
 
-    font-size: 3em;
-    color: #dcdcdc;
-
+    /* change responsive*/
+    padding: 100px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    color: #ffffff;
+}
+#personnal-project .title, #current-project .title{
+    display: flex;
+    font-size: 3em;
+}
+#personnal-project div{
+    display: flex;
+    flex-direction: row;
+}
+#personnal-project section{
+    padding: 20px;
+}
+
+#personnal-project div h2{
+    color: #ce6a6b;
+}
+
+@media only screen and (max-width: 600px) {
+    #personnal-project{
+        padding: 20vh 5vh;
+    }
+    #personnal-project, #personnal-project div{
+        flex-direction: column;
+    }
 }
 
 /*////////////////////////////////////////////////
 //////////// CURRENT PROJECT /////////////////////*/
 #current-project{
-    background-image: url("/img/tmp/how-to-surive-third-year-university-1.webp");
+    background-image:  linear-gradient(to top, #000000e1, #00000094), url("/img/tmp/library_reading-room.jpg");
     background-size: cover;
-    background-position: top;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+}
+#current-project .enterprise img{
+    margin: 20px;
+    width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+    #current-project{
+        padding: 20vh 5vh;
+    }
+    #current-project .enterprise{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////
