@@ -70,6 +70,9 @@ ul {
     padding: 0;
     list-style: none;
 }
+.bold {
+    font-weight: bold;
+}
 
 /* ///////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////// */
@@ -758,9 +761,9 @@ footer .fa-linkedin:hover {
     }
     /* section image : container de l'image*/
     .profil .img {
-        width: 80%;
+        width: 60%;
         opacity: 1;
-        margin-bottom: 50px;
+        margin-bottom: 20vh;
     }
     /* modification au cas de :hover sur la ligne  */
     .modified-profil .img{
@@ -841,7 +844,10 @@ footer .fa-linkedin:hover {
     justify-content: space-evenly;
     align-items: center;
 }
-
+#demo video{
+    width: 65vw;
+    height: auto;
+}
 
 @media only screen and (max-width: 600px) {
     #latest-project ul , #current-project ul{
@@ -913,7 +919,12 @@ footer .fa-linkedin:hover {
 
 @media only screen and (max-width: 600px) {
     #current-project{
-        padding: 20vh 5vh;
+        overflow: hidden;
+        padding: 20vh 5vw;
+    }
+    #current-project .enterprise img{
+        margin: 20px;
+        width: 75vw;
     }
     #current-project .enterprise{
         display: flex;
