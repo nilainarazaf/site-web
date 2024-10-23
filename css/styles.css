@@ -71,7 +71,7 @@ ul {
     list-style: none;
 }
 .bold {
-    font-weight: bold;
+    font-weight: bold ;
 }
 
 /* ///////////////////////////////////////////////////////////
@@ -330,6 +330,7 @@ main{
 .modified-presentation .left-side img{
     transform: scale(2.5) translateX(2vw) translateY(2vh); /*retourne au coin gauche*/
 }
+
 
 /* ///////////////////////////////////////////////////////////
 ////////////////////// PROFIL ROW //////////////////////////*/
@@ -751,6 +752,12 @@ footer .fa-linkedin:hover {
     }
     .welcome{
         font-size: 40px;
+    }
+    .welcome .fa{
+        font-size: x-large;
+    }
+    .welcome .quote{
+        font-size: 1.3em;
     }
     .profil .detail {
         display: flex;
