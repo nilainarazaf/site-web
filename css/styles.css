@@ -757,7 +757,8 @@ footer .fa-linkedin:hover {
         font-size: x-large;
     }
     .welcome .quote{
-        font-size: 1.3em;
+        width: 1em;
+        height:1em;
     }
     .profil .detail {
         display: flex;
